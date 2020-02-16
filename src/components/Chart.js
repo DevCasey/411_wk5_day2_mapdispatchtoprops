@@ -4,7 +4,14 @@ import PieChart from 'react-minimal-pie-chart';
 const Chart = (props) => {
     // create variable "over" with all the cars whos horsepower is >= 200
     // create variable "under" with all the cars whos horsepower is < 200
+    const over = props.cars.filter(Car => {
+        return Car.horsepower > 200;
+    })
 
+    const under = props.cars.filter(Car => {
+        return Car.horsepower <= 200;
+    })
+    
     return (
         <div>
             <PieChart style={{ width: '200px' }}

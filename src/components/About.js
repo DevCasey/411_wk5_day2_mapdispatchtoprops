@@ -5,7 +5,7 @@ class About extends Component {
     state = {
         checked: true,
         heading: 'About FakeCars.com'
-    }
+    } 
 
     toggleSwitch = () => {
         const newVal = !this.state.checked
